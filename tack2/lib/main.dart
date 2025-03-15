@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '';
 
 void main() {
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home:HomeScreen() ,
     );
   }
 }
@@ -200,38 +201,49 @@ fontWeight: FontWeight.bold
           SizedBox(
             height: 100,
           ),
-          Icon(Icons.home,
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width/7,
-          ),
-          Icon(Icons.shopping_cart),
-          SizedBox(
-            width: MediaQuery.of(context).size.width/7,
-          ),
-          Container(
+         IconButton(onPressed: (){}, icon: Icon(Icons.home),
+           style: IconButton.styleFrom(
+             backgroundColor: Colors.orange[300],
+           ),
 
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(150),
-                color: Colors.amber,
-              ),
-              child:
-          Icon(Icons.add)
-          ),
+         ),
           SizedBox(
-            width: MediaQuery.of(context).size.width/7,
+            width: MediaQuery.of(context).size.width/10,
           ),
-          Icon(Icons.favorite),
+         IconButton(onPressed:null, icon: Icon(Icons.shopping_cart),
+           disabledColor: Colors.grey,
+         ),
           SizedBox(
-            width: MediaQuery.of(context).size.width/7,
+            width: MediaQuery.of(context).size.width/10,
           ),
-          Icon(Icons.person),
+
+          SizedBox(
+            width: MediaQuery.of(context).size.width/10,
+          ),
+        IconButton(onPressed: null, icon: Icon(Icons.favorite),
+          disabledColor: Colors.grey,
+        ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width/10,
+          ),
+          IconButton(onPressed: null, icon: Icon(Icons.person),
+            disabledColor: Colors.grey,
+          ),
         ],
       )
    ]
   ),
 )
-    )
+    ),
+floatingActionButton: FloatingActionButton(onPressed: (
+    ){
+
+},
+
+child: Icon(Icons.add),
+
+),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
 
 
